@@ -13,6 +13,8 @@ createApp({
         return 'ciao';
     }
   } */
+
+  /*mounted di axios */
   mounted() {
     axios
       .get(
