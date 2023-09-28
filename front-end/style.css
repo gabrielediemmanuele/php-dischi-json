@@ -16,7 +16,9 @@ main {
 }
 
 .card-container {
-  margin: 30px auto;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
   height: 500px;
   border: 2px lime dashed;
   display: flex;
