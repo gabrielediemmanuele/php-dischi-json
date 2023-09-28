@@ -9,30 +9,33 @@
     <meta name="author" content="Gabriele Di Emmanuele" />
     <meta name="description" content="php-dischi-json" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css" />
     <!-- Vue JS-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!-- JS -->
     <script type="text/javascript" src="./main.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <div id="app">
       <!--   header cont  -->
       <header>
-        <div class="head-cont"></div>
+        <div class="head-cont">
+          <img src="../front-end/pngwing.com.png" alt="spotify" />
+        </div>
       </header>
       <!-- main cont -->
       <main>
         <div class="card-container">
           <!-- card -->
-          <div class="card">
-            <img src="" alt="" />
-            <div class="title"></div>
-            <span></span>
-            <div class="title date"></div>
+          <div class="card" v-for="album in albums">
+            <img :src="album.poster" :alt="album.title" />
+            <div class="title">{{album.title}}</div>
+            <span> {{ album.author }}</span>
+            <div class="title date">{{ album.year }}</div>
           </div>
         </div>
       </main>
