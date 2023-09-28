@@ -34,7 +34,12 @@
       <main>
         <div class="card-container">
           <!-- Album card -->
-          <div class="card" v-for="(album, index) in albums" :key="index">
+          <div
+            class="card"
+            v-for="(album, index) in albums"
+            :key="index"
+            @click="getCardInfo(index)"
+          >
             <img :src="album.poster" :alt="album.title" />
             <div class="title">{{album.title}}</div>
             <span> {{ album.author }}</span>
